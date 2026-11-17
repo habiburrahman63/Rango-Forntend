@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-lato: 'Lato', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-dosis: 'Dosis', sans-serif;
+  --color-rango-teal: #048287;
+  --color-rango-teal-dark: #036b6f;
+  --color-rango-dark: #222222;
+  --color-rango-footer: #333333;
+  --color-rango-footer-bottom: #2e2e2e;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #555555;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Ensure cursor pointer on all clickable elements */
+button,
+a,
+select,
+summary,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"],
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Keyframes for Hero Slider */
+@keyframes slideTimer {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Shine overlay sweep effect on hover */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+  transition: none;
+}
+.shine-effect:hover::after {
+  left: 200%;
+  transition: left 0.85s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #048287;
+}
