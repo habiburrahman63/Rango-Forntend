@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useCart } from '../context/CartContext';
+import { mockData } from '../data/mockData';
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const { setQuickViewProduct } = useCart();
 
   const slides = [
     {
@@ -221,7 +224,13 @@ export default function HeroSlider() {
             </div>
 
             {/* Bottom Half: Watches Banner */}
-            <div className="relative w-full flex-1 min-h-0 overflow-hidden group/item cursor-pointer bg-[#e0e2e5] shine-effect">
+            <div
+              onClick={() => {
+                const watchProduct = mockData.featuredProducts.bestSeller.find((p) => p.id === 'bs-3');
+                if (watchProduct) setQuickViewProduct(watchProduct);
+              }}
+              title="Click to view Luxury Watch details"
+              className="relative w-full flex-1 min-h-0 overflow-hidden group/item cursor-pointer bg-[#e0e2e5] shine-effect">
               <img
                 src="/images/hero-image3.jpg"
                 alt="New Arrivals Sale 30% Watches"

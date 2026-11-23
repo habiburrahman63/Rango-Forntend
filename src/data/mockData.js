@@ -111,7 +111,7 @@ export const mockData = {
         badge: 'NEW',
         rating: 5,
         image: '/images/product-sweater.jpg',
-        hoverImage: '/images/product-jacket-1.jpg',
+        hoverImage: '/images/product-sweater.jpg',
         category: 'Knitwear & Sweaters',
         description: 'Soft-touch jacquard knitted sweater featuring modern Nordic geometric patterns. Designed for effortless seasonal layering.'
       },
@@ -124,7 +124,7 @@ export const mockData = {
         badge: null,
         rating: 5,
         image: '/images/product-watch.jpg',
-        hoverImage: '/images/product-watch.jpg',
+        hoverImage: '/images/product-watch-2.jpg',
         category: 'Accessories & Watches',
         description: 'Minimalist dress watch featuring an ultra-slim stainless steel casing, mineral glass crystal, and genuine supple leather strap.'
       },
@@ -194,9 +194,9 @@ export const mockData = {
         badge: null,
         rating: 5,
         image: '/images/product-watch.jpg',
-        hoverImage: '/images/product-watch.jpg',
+        hoverImage: '/images/product-watch-2.jpg',
         category: 'Accessories & Watches',
-        description: 'Minimalist dress watch featuring an ultra-slim stainless steel casing and genuine leather strap.'
+        description: 'Minimalist dress watch featuring an ultra-slim stainless steel casing, mineral glass crystal, and genuine supple leather strap.'
       }
     ],
     mostWanted: [
@@ -374,7 +374,7 @@ export const mockData = {
         badge: 'NEW',
         rating: 5,
         image: '/images/product-sweater.jpg',
-        hoverImage: '/images/product-jacket-1.jpg'
+        hoverImage: '/images/product-sweater.jpg'
       },
       {
         id: 'mf-3',
@@ -384,7 +384,9 @@ export const mockData = {
         badge: null,
         rating: 5,
         image: '/images/product-watch.jpg',
-        hoverImage: '/images/product-watch.jpg'
+        hoverImage: '/images/product-watch-2.jpg',
+        category: 'Accessories & Watches',
+        description: 'Minimalist dress watch featuring an ultra-slim stainless steel casing, mineral glass crystal, and genuine supple leather strap.'
       }
     ]
   },
