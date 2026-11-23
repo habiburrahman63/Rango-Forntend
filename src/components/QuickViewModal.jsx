@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Star, Heart, ShoppingBag, Plus, Minus, Check } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { use3DTilt } from '../hooks/use3DTilt';
 
 function getProductOptions(product) {
   const category = (product.category || '').toLowerCase();
@@ -68,6 +69,7 @@ function getProductOptions(product) {
 function QuickViewDialog({ product, onClose }) {
   const { addToCart, toggleWishlist, isInWishlist } = useCart();
   const options = getProductOptions(product);
+  const imageTiltRef = use3DTilt({ maxTilt: 5.5, perspective: 750, scale: 1.02 });
 
   const [selectedImage, setSelectedImage] = useState(product.image);
   const [selectedSize, setSelectedSize] = useState(options.defaultSize);
@@ -108,7 +110,7 @@ function QuickViewDialog({ product, onClose }) {
       />
 
       {/* Modal Dialog */}
-      <div className="relative bg-white w-full max-w-3xl shadow-2xl rounded-xs overflow-hidden z-10 my-8">
+      <div className="relative bg-white w-full max-w-3xl shadow-2xl rounded-xs overflow-hidden z-10 my-8 animate-modal-3d preserve-3d">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -122,15 +124,18 @@ function QuickViewDialog({ product, onClose }) {
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left: Product Images */}
           <div className="p-6 bg-[#fbfbfb] flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-gray-100">
-            <div className="relative w-full aspect-[4/5] overflow-hidden mb-3 bg-white border border-gray-100 flex items-center justify-center p-2">
+            <div
+              ref={imageTiltRef}
+              className="relative w-full aspect-[4/5] overflow-hidden mb-3 bg-white border border-gray-100 flex items-center justify-center p-2 tilt-card-3d preserve-3d shadow-xs hover:shadow-lg transition-all"
+            >
               <img
                 src={activeImg}
                 alt={product.title}
-                className="w-full h-full object-contain object-center transition-all duration-300"
+                className="w-full h-full object-contain object-center transition-all duration-300 depth-layer-img"
               />
               {product.badge && (
                 <span
-                  className={`absolute top-3 left-3 text-[10px] font-bold tracking-widest uppercase px-2.5 py-0.5 text-white ${
+                  className={`absolute top-3 left-3 text-[10px] font-bold tracking-widest uppercase px-2.5 py-0.5 text-white depth-layer-pop ${
                     product.badge === 'NEW' ? 'bg-[#222222]' : 'bg-[#048287]'
                   }`}
                 >

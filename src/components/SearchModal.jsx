@@ -35,7 +35,7 @@ export default function SearchModal() {
       />
 
       {/* Modal Box */}
-      <div className="relative w-full max-w-2xl bg-white shadow-2xl rounded-xs overflow-hidden z-10">
+      <div className="relative w-full max-w-2xl bg-white shadow-2xl rounded-xs overflow-hidden z-10 animate-modal-3d preserve-3d">
         {/* Search Input Bar */}
         <div className="p-4 border-b border-gray-100 flex items-center gap-3 bg-gray-50">
           <Search size={22} className="text-[#048287]" />

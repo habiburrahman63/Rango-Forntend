@@ -200,7 +200,7 @@ export default function AuthModal() {
       />
 
       {/* Modal Dialog */}
-      <div className="relative bg-white w-full max-w-md shadow-2xl rounded-xs overflow-hidden z-10 my-8 border border-gray-100 animate-in fade-in zoom-in-95 duration-200">
+      <div className="relative bg-white w-full max-w-md shadow-2xl rounded-xs overflow-hidden z-10 my-8 border border-gray-100 animate-modal-3d preserve-3d">
         {/* Header with Close */}
         <div className="flex items-center justify-between px-6 pt-5 pb-3 border-b border-gray-100 bg-[#fbfbfb]">
           <div className="flex items-center gap-2">

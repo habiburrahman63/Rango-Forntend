@@ -52,7 +52,7 @@ export default function HelpModal() {
       />
 
       {/* Modal Dialog */}
-      <div className="relative bg-white w-full max-w-2xl shadow-2xl rounded-xs overflow-hidden z-10 my-8 border border-gray-100 flex flex-col max-h-[90vh]">
+      <div className="relative bg-white w-full max-w-2xl shadow-2xl rounded-xs overflow-hidden z-10 my-8 border border-gray-100 flex flex-col max-h-[90vh] animate-modal-3d preserve-3d">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-[#fbfbfb]">
           <div className="flex items-center gap-2">

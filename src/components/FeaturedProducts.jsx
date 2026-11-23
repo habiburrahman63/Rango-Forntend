@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import ProductCard from './ProductCard';
 import { mockData } from '../data/mockData';
+import { useScrollReveal3D } from '../hooks/useScrollReveal3D';
 
 export default function FeaturedProducts() {
   const [activeTab, setActiveTab] = useState('bestSeller');
+  const revealRef = useScrollReveal3D();
 
   const tabs = [
     { key: 'bestSeller', label: 'BEST SELLER' },
@@ -37,8 +39,11 @@ export default function FeaturedProducts() {
           })}
         </div>
 
-        {/* 4-Product Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {/* 4-Product Row with 3D Entrance */}
+        <div
+          ref={revealRef}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 reveal-on-scroll-3d stagger-3d"
+        >
           {currentProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

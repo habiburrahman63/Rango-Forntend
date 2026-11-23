@@ -112,35 +112,35 @@ export default function Footer() {
               <a
                 href="#facebook"
                 aria-label="Facebook"
-                className="w-9 h-9 bg-[#444444] hover:bg-[#048287] text-white flex items-center justify-center transition-colors shadow-xs"
+                className="w-9 h-9 bg-[#444444] hover:bg-[#048287] text-white flex items-center justify-center transition-all shadow-xs service-icon-3d"
               >
                 <FacebookIcon />
               </a>
               <a
                 href="#twitter"
                 aria-label="Twitter"
-                className="w-9 h-9 bg-[#444444] hover:bg-[#048287] text-white flex items-center justify-center transition-colors shadow-xs"
+                className="w-9 h-9 bg-[#444444] hover:bg-[#048287] text-white flex items-center justify-center transition-all shadow-xs service-icon-3d"
               >
                 <TwitterIcon />
               </a>
               <a
                 href="#instagram"
                 aria-label="Instagram"
-                className="w-9 h-9 bg-[#444444] hover:bg-[#048287] text-white flex items-center justify-center transition-colors shadow-xs"
+                className="w-9 h-9 bg-[#444444] hover:bg-[#048287] text-white flex items-center justify-center transition-all shadow-xs service-icon-3d"
               >
                 <InstagramIcon />
               </a>
               <a
                 href="#linkedin"
                 aria-label="LinkedIn"
-                className="w-9 h-9 bg-[#444444] hover:bg-[#048287] text-white flex items-center justify-center transition-colors shadow-xs"
+                className="w-9 h-9 bg-[#444444] hover:bg-[#048287] text-white flex items-center justify-center transition-all shadow-xs service-icon-3d"
               >
                 <LinkedInIcon />
               </a>
               <a
                 href="#rss"
                 aria-label="RSS Feed"
-                className="w-9 h-9 bg-[#444444] hover:bg-[#048287] text-white flex items-center justify-center transition-colors shadow-xs"
+                className="w-9 h-9 bg-[#444444] hover:bg-[#048287] text-white flex items-center justify-center transition-all shadow-xs service-icon-3d"
               >
                 <Rss size={16} />
               </a>
